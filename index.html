@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rasayan Panchtatva 2025 – KJ Somaiya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <span class="nav-logo">cr</span>
+        <span class="nav-name">Club React · KJSSC</span>
+      </div>
+      <div class="nav-links">
+        <a href="#events">Events</a>
+        <a href="#about">About</a>
+        <button class="btn-primary btn-sm" onclick="openModal()">Register Now</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="tatva tatva-fire"></div>
+      <div class="tatva tatva-water"></div>
+      <div class="tatva tatva-earth"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">KJ Somaiya College · Dept. of Chemistry · Club React presents</p>
+      <h1 class="hero-title">
+        <span class="title-rasayan">Rasayan</span>
+        <span class="title-panch">Panchtatva</span>
+      </h1>
+      <p class="hero-date">16 December 2025 &nbsp;·&nbsp; Vidyavihar, Mumbai</p>
+      <p class="hero-tagline">Five elements. One fest. Infinite chemistry.</p>
+      <div class="hero-cta">
+        <button class="btn-primary btn-lg" onclick="openModal()">Register Now</button>
+        <a href="#events" class="btn-outline btn-lg">Explore Events</a>
+      </div>
+      <div class="elements-row">
+        <span class="el el-earth">🌍 Earth</span>
+        <span class="el el-water">💧 Water</span>
+        <span class="el el-fire">🔥 Fire</span>
+        <span class="el el-air">💨 Air</span>
+        <span class="el el-space">✨ Space</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-label">About the Fest</span>
+          <h2 class="section-title">For the Students, By the Students</h2>
+          <p>Rasayan is an annual inter-collegiate fest that serves as a platform for students to apply their knowledge of Chemistry in an engaging and enjoyable manner. This year's theme, <strong>Panchtatva</strong>, celebrates the five natural elements—Earth, Water, Fire, Air, and Space—and their vital role in sustainability and Green Chemistry.</p>
+          <p style="margin-top:1rem">Participate, compete, create, and grow. Rasayan 25–26 awaits!</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card"><span class="stat-num">13</span><span class="stat-label">Events</span></div>
+          <div class="stat-card"><span class="stat-num">8</span><span class="stat-label">Offline</span></div>
+          <div class="stat-card"><span class="stat-num">5</span><span class="stat-label">Online</span></div>
+          <div class="stat-card"><span class="stat-num">Dec 16</span><span class="stat-label">Fest Day</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EVENTS ── -->
+  <section class="events section" id="events">
+    <div class="container">
+      <span class="section-label">What's on</span>
+      <h2 class="section-title">Events & Competitions</h2>
+
+      <div class="events-tabs">
+        <button class="tab-btn active" data-tab="offline">Offline Events</button>
+        <button class="tab-btn" data-tab="online">Online Events</button>
+      </div>
+
+      <div class="events-grid" id="tab-offline"></div>
+      <div class="events-grid hidden" id="tab-online"></div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="contact section" id="contact">
+    <div class="container contact-inner">
+      <div>
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title" style="color:#fff">Contact Us</h2>
+        <div class="contact-grid">
+          <div class="contact-person"><strong>Nitin Gupta</strong><br/><small>Chairperson</small><br/>+91 81738 46202</div>
+          <div class="contact-person"><strong>Arya Bhagwat</strong><br/><small>Vice-Chairperson</small><br/>+91 81694 69873</div>
+          <div class="contact-person"><strong>Latika Dukhande</strong><br/><small>Events Head</small><br/>+91 91373 12184</div>
+          <div class="contact-person"><strong>Meet Shetye</strong><br/><small>Vice-Chairperson</small><br/>+91 93249 73090</div>
+        </div>
+        <p style="margin-top:1.5rem;opacity:.8">📧 rasayan.kjssc@somaiya.edu</p>
+      </div>
+      <div class="contact-cta">
+        <p>Ready to compete?</p>
+        <button class="btn-primary btn-lg" onclick="openModal()">Register Now</button>
+        <p class="contact-note">Registration is free & mandatory for all events.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <p>© 2025 Club React · KJ Somaiya College of Science & Commerce · Dept. of Chemistry</p>
+    <p style="margin-top:.3rem;opacity:.5;font-size:.8rem">Rasayan Panchtatva · Discover, React, Inspire</p>
+  </footer>
+
+  <!-- ── MODAL OVERLAY ── -->
+  <div class="modal-overlay hidden" id="modal-overlay" onclick="closeModalOnOverlay(event)">
+    <div class="modal" id="modal">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+
+      <!-- Progress bar -->
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="progress-steps" id="progress-steps">
+        <span class="step active" data-step="1">1. You</span>
+        <span class="step" data-step="2">2. Event</span>
+        <span class="step" data-step="3">3. Team</span>
+        <span class="step" data-step="4">4. Done</span>
+      </div>
+
+      <form id="reg-form" novalidate>
+
+        <!-- STEP 1 – Personal Info -->
+        <div class="form-step active" data-step="1">
+          <h2 class="form-title">Tell us about yourself</h2>
+          <div class="form-group">
+            <label for="f-name">Full Name <span class="req">*</span></label>
+            <input type="text" id="f-name" name="name" placeholder="Arjun Sharma" required />
+            <span class="err-msg" id="err-name"></span>
+          </div>
+          <div class="form-group">
+            <label for="f-email">Email Address <span class="req">*</span></label>
+            <input type="email" id="f-email" name="email" placeholder="arjun@college.edu" required />
+            <span class="err-msg" id="err-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="f-phone">Phone Number <span class="req">*</span></label>
+            <input type="tel" id="f-phone" name="phone" placeholder="9876543210" required maxlength="10" />
+            <span class="err-msg" id="err-phone"></span>
+          </div>
+          <div class="form-group">
+            <label for="f-college">College Name <span class="req">*</span></label>
+            <input type="text" id="f-college" name="college" placeholder="KJ Somaiya College" required />
+            <span class="err-msg" id="err-college"></span>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-course">Course <span class="req">*</span></label>
+              <input type="text" id="f-course" name="course" placeholder="B.Sc. Chemistry" required />
+              <span class="err-msg" id="err-course"></span>
+            </div>
+            <div class="form-group">
+              <label for="f-year">Year <span class="req">*</span></label>
+              <select id="f-year" name="year" required>
+                <option value="">Select</option>
+                <option>FY</option><option>SY</option><option>TY</option><option>PG 1st</option><option>PG 2nd</option>
+              </select>
+              <span class="err-msg" id="err-year"></span>
+            </div>
+          </div>
+          <div class="form-nav">
+            <span></span>
+            <button type="button" class="btn-primary" onclick="nextStep(1)">Next →</button>
+          </div>
+        </div>
+
+        <!-- STEP 2 – Event Selection -->
+        <div class="form-step hidden" data-step="2">
+          <h2 class="form-title">Choose your event</h2>
+          <div class="form-group">
+            <label for="f-event">Select Event <span class="req">*</span></label>
+            <select id="f-event" name="event" required onchange="onEventChange()">
+              <option value="">-- Select an event --</option>
+              <optgroup label="Offline Events">
+                <option value="Green Mind Battle|1|solo">Green Mind Battle (Quiz) – Solo</option>
+                <option value="Mindscape 17|1|solo">Mindscape 17 (Memory Challenge) – Solo</option>
+                <option value="Elemental Sharks|3|team">Elemental Sharks (Shark Tank) – Team (1–3)</option>
+                <option value="Tatva Trail|5|team">Tatva Trail (Minute to Win It) – Team of 5</option>
+                <option value="Eco Forensics|3|team">Eco Forensics – Solo / Team (1–3)</option>
+                <option value="Srishti Rahasya|5|team">Srishti Rahasya (Treasure Hunt) – Team of 5</option>
+                <option value="Atomic Shuffle|1|solo">Atomic Shuffle – Solo</option>
+                <option value="Kismat (Housie)|1|solo">Kismat (Housie) – Solo</option>
+              </optgroup>
+              <optgroup label="Online Events">
+                <option value="Doodleium|1|solo">Doodleium (Doodling) – Solo</option>
+                <option value="Eco-Vision|1|solo">Eco-Vision (Photography) – Solo</option>
+                <option value="Reel-iemental|1|solo">Reel-iemental (Reels) – Solo</option>
+                <option value="LabelLab|1|solo">LabelLab (Label Designing) – Solo</option>
+                <option value="Sustain-a-Meme|1|solo">Sustain-a-Meme (Memes) – Solo</option>
+              </optgroup>
+            </select>
+            <span class="err-msg" id="err-event"></span>
+          </div>
+
+          <div class="event-info-card hidden" id="event-info-card">
+            <div id="event-info-content"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="f-payment">Payment Status</label>
+            <select id="f-payment" name="payment">
+              <option value="Pending">Pending</option>
+              <option value="Paid">Paid</option>
+              <option value="Free Event">Free Event</option>
+            </select>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn-outline" onclick="prevStep(2)">← Back</button>
+            <button type="button" class="btn-primary" onclick="nextStep(2)">Next →</button>
+          </div>
+        </div>
+
+        <!-- STEP 3 – Team Details -->
+        <div class="form-step hidden" data-step="3">
+          <h2 class="form-title" id="step3-title">Team Details</h2>
+          <p id="step3-subtitle" class="form-subtitle"></p>
+          <div id="team-members-wrap"></div>
+          <div class="form-nav">
+            <button type="button" class="btn-outline" onclick="prevStep(3)">← Back</button>
+            <button type="button" class="btn-primary" onclick="nextStep(3)">Submit →</button>
+          </div>
+        </div>
+
+        <!-- STEP 4 – Success -->
+        <div class="form-step hidden" data-step="4">
+          <div class="success-view">
+            <div class="success-icon">✅</div>
+            <h2>You're registered!</h2>
+            <p id="success-summary"></p>
+            <div class="success-actions">
+              <button type="button" class="btn-primary" onclick="closeModal()">Done</button>
+              <button type="button" class="btn-outline" onclick="resetAndRegisterAnother()">Register Another</button>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- ── ADMIN PANEL ── -->
+  <div class="admin-fab" onclick="toggleAdmin()" title="Admin Panel">⚙️</div>
+
+  <div class="admin-panel hidden" id="admin-panel">
+    <div class="admin-header">
+      <h3>Admin · Registrations</h3>
+      <button onclick="toggleAdmin()">✕</button>
+    </div>
+    <div class="admin-toolbar">
+      <span id="admin-count">0 entries</span>
+      <button class="btn-outline btn-sm" onclick="downloadCSV()">⬇ Download CSV</button>
+      <button class="btn-outline btn-sm" style="border-color:#c0392b;color:#c0392b" onclick="clearAllData()">🗑 Clear</button>
+    </div>
+    <div class="admin-table-wrap">
+      <table id="admin-table">
+        <thead>
+          <tr>
+            <th>#</th><th>Name</th><th>College</th><th>Event</th><th>Team Size</th><th>Payment</th><th>Time</th>
+          </tr>
+        </thead>
+        <tbody id="admin-tbody"></tbody>
+      </table>
+      <p class="admin-empty hidden" id="admin-empty">No registrations yet.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
