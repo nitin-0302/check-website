@@ -429,7 +429,8 @@ function buildTeamFields() {
 
 // ── SUBMIT ────────────────────────────────
 function submitForm() {
-  const teamInputs = [...document.querySelectorAll(".team-inp")].map(i => i.value.trim()).filter(Boolean);
+  const teamInputs = [...document.querySelectorAll(".team-inp")]
+    .map(i => i.value.trim()).filter(Boolean);
 
   const entry = {
     id: Date.now(),
@@ -447,10 +448,27 @@ function submitForm() {
     payment: document.getElementById("f-payment").value
   };
 
-  // Save to localStorage
+  // 🚀 SEND DATA TO GOOGLE SHEETS
+  fetch("https://script.google.com/macros/s/AKfycbyid8E5NcS0XkqO6-XbTIY7Adgc8SwBPpkomXy7FaHlE9ivAK5jYxcOTJnGzr34Nt2O/exec", {
+    method: "POST",
+    body: JSON.stringify(entry)
+  })
+  .then(res => res.text())
+  .then(data => console.log("Saved to Google Sheets"))
+  .catch(err => console.error("Error:", err));
+
+  // 💾 SAVE TO LOCAL STORAGE (your existing feature)
   const all = getRegistrations();
   all.push(entry);
   localStorage.setItem("rasayan_registrations", JSON.stringify(all));
+
+  // ✅ SUCCESS MESSAGE
+  document.getElementById("success-summary").textContent =
+    `${entry.name}, you're registered for "${entry.event}"! The organizers will be in touch via ${entry.email}.`;
+
+  goToStep(4);
+  refreshAdmin();
+}
 
   // Show success
   document.getElementById("success-summary").textContent =
