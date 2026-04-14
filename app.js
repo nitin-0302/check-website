@@ -449,7 +449,7 @@ function submitForm() {
   };
 
   // 🚀 SEND DATA TO GOOGLE SHEETS
-  fetch("https://script.google.com/macros/s/AKfycbyid8E5NcS0XkqO6-XbTIY7Adgc8SwBPpkomXy7FaHlE9ivAK5jYxcOTJnGzr34Nt2O/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwoMKryZPWraq2okWXds9AtQYbYxBUHOdGrG9YehV6NYVjfKS6shSVzt21NQmtHrIXC/exec", {
     method: "POST",
     body: JSON.stringify(entry)
   })
